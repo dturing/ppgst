@@ -101,8 +101,7 @@ class wProducer : public wBaseSrc {
 
 				printf("create frame. pool: %p\n", self->pool );
 				gst_buffer_pool_acquire_buffer( self->pool, buf, NULL );
-				printf("got buffer, size %i\n", GST_BUFFER_SIZE(buf) );
-				/*
+			/*
 				if( gst_pad_alloc_buffer (GST_BASE_SRC_PAD (base), GST_BUFFER_OFFSET_NONE,
 						self->Data.BufferSize(), gst_pad_get_current_caps (GST_BASE_SRC_PAD (base)), buf) // XXX JUSTFORREFERENCE
 					!= GST_FLOW_OK ) return GST_FLOW_ERROR;

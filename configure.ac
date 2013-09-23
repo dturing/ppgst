@@ -1,7 +1,7 @@
 # $Id$
 
 AC_INIT( libppgst, 0.3, mail@danielturing.com )
-AM_INIT_AUTOMAKE( AC_PACKAGE_NAME, AC_PACKAGE_VERSION )
+AM_INIT_AUTOMAKE( [0.3 foreign] )
 
 # Checks for programs.
 AC_PROG_CXX
