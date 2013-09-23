@@ -16,6 +16,13 @@ if test "x$HAVE_PKGCONFIG" = "xno"; then
   AC_MSG_ERROR(you need to have pkgconfig installed !)
 fi
 
+# some checking helpers
+
+AC_DEFUN([CHECK_PKG],[
+	PKG_CHECK_MODULES($1,$2,HAVE_$1=yes,HAVE_$1=no)
+	AM_CONDITIONAL(USE_[$1], test x$HAVE_[$1] = xyes)
+])
+
 # Checks for libraries.
 
 # check for gstreamer
@@ -36,6 +43,10 @@ PPGST_CFLAGS="-I\$(top_srcdir)/src $GST_CFLAGS"
 PPGST_LIBS="-L\$(top_srcdir)/src -lppgst $GST_LIBS"
 AC_SUBST(PPGST_CFLAGS)
 AC_SUBST(PPGST_LIBS)
+
+CHECK_PKG(OPENCV,opencv)
+AC_SUBST(OPENCV_CFLAGS)
+AC_SUBST(OPENCV_LIBS)
 
 
 # some checking helpers
@@ -68,6 +79,7 @@ AC_OUTPUT([
 	src/Makefile
 	test/Makefile
 	misc/Makefile
+	cv/Makefile
 	libppgst.pc
 	])
 

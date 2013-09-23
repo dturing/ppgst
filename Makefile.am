@@ -7,6 +7,7 @@ SUBDIRS = \
 	src \
 	test \
 	misc \
+	cv \
 	$(NULL)
 
 
