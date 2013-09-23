@@ -1,0 +1,14 @@
+# $Id: libwarsaw.pc.in,v 1.1.1.1 2005/02/09 01:19:18 dan Exp $
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libWarsaw
+Description: C++ wrapper library for writing GStreamer plugins
+Version: @VERSION@
+Requires: gstreamer-1.0
+Conflicts:
+Libs: -L${libdir} -lwarsaw @GST_LIBS@
+Cflags: -I${includedir}/libwarsaw @GST_CFLAGS@
