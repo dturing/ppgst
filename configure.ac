@@ -67,6 +67,7 @@ AC_OUTPUT([
 	Makefile
 	src/Makefile
 	test/Makefile
+	misc/Makefile
 	libppgst.pc
 	])
 

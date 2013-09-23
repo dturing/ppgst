@@ -6,6 +6,7 @@ NULL=
 SUBDIRS = \
 	src \
 	test \
+	misc \
 	$(NULL)
 
 

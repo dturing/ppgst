@@ -11,7 +11,7 @@ wEnum *foonum;
 extern "C" {
 
 #define AUTHORS "Daniel Fischer <dan@subsignal.org>"
-#define SORT "warsaw/test"
+#define SORT "ppgst/test"
 	
 static gboolean
 plugin_init( GstPlugin *plugin ) {
@@ -28,8 +28,8 @@ plugin_init( GstPlugin *plugin ) {
 GST_PLUGIN_DEFINE (
 	GST_VERSION_MAJOR,
 	GST_VERSION_MINOR,
-	warsawtest,
-	"warsaw filter tests",
+	pptest,
+	"ppgst filter tests",
 	plugin_init,
 	PACKAGE_VERSION,
 	"LGPL",

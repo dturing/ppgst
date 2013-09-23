@@ -39,7 +39,6 @@ void wEnum::Init( const char *name, va_list args ) {
 }
 
 GType wEnum::Type() {
-	printf("get enum type %i\n", type );
 	if( type==0 ) {
 		if( !values.Length() ) {
 			g_warning("cannot initialize enum %s, no values", Name );
@@ -57,7 +56,6 @@ GType wEnum::Type() {
 //			delete value;
 		}
 		type = g_enum_register_static(Name,gvalues);
-		printf("type now %i\n", type );
 	}
 
 	return( type );
