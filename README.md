@@ -68,7 +68,7 @@ And last, because most important: thanks, Sylvi.
 
 That's all, folks. If you have comments, suggestions, need help, whatever,
 write to:
-	Daniel Turing <mail_AT_danielturing_DOT_com> (apply anti-spam logic)
+	Daniel Turing (mail AT danielturing DOT com)
 	
 Please also do so if you put libppgst to any interesting (or merely cool)
 use. I'd really like to know.
