@@ -38,7 +38,7 @@ class wOutofplace : public wBaseTransform {
 				return GST_FLOW_OK;
 			}
 			
-		static gboolean transform_size( GstBaseTransform *base, GstPadDirection direction, GstCaps *caps, guint size, GstCaps *othercaps, guint *othersize ) {
+		static gboolean transform_size( GstBaseTransform *base, GstPadDirection direction, GstCaps *caps, gsize size, GstCaps *othercaps, gsize *othersize ) {
 				*othersize = size;
 				return TRUE;
 			}

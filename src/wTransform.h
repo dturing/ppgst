@@ -114,7 +114,7 @@ class wTransform : public wBaseTransform {
 			return( In.BufferSize() );
 		}
 			
-		static gboolean transform_size( GstBaseTransform *base, GstPadDirection direction, GstCaps *caps, guint size, GstCaps *othercaps, guint *othersize ) {
+		static gboolean transform_size( GstBaseTransform *base, GstPadDirection direction, GstCaps *caps, gsize size, GstCaps *othercaps, gsize *othersize ) {
 				wTransform<InFormat,OutFormat> *self = (wTransform<InFormat,OutFormat>*)GetSelf(G_OBJECT(base));
 				if( direction == GST_PAD_SINK ) {
 					self->Out.SetCaps( othercaps );
