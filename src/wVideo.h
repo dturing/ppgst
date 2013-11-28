@@ -61,7 +61,7 @@ class wY800Video : public wVideo {
 			: wVideo( 
 				gst_caps_from_string(
 					"video/x-raw, " 
-						"format=Y800, " 
+						"format=GRAY8, " 
 						"width=(int)[1, MAX], "
 						"height=(int)[1, MAX], " 
 						"framerate = (fraction) [ 0/1, MAX ] " 

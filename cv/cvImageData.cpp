@@ -23,7 +23,7 @@ cvImageData::cvImageData( GstCaps *caps )
 				"framerate = (fraction) [ 0/1, MAX ] "
 			";"
 			"video/x-raw, "
-				"format=Y800, "
+				"format=GRAY8, "
 				"framerate = (fraction) [ 0/1, MAX ] "
 		) ) {
 		

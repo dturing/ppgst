@@ -34,7 +34,7 @@ class cvNChannelImageData : public cvImageData {
 			: cvImageData( gst_caps_from_string(
 				(n==1?
 					"video/x-raw, "
-						"format=Y800, "
+						"format=GRAY8, "
 						"framerate = (fraction) [ 0/1, MAX ] "
 				: (n==3 ? 
 					"video/x-raw, "

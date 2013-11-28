@@ -10,6 +10,8 @@
 #include "cvErode.h"
 #include "cvCamShift.h"
 #include "uvBlur.h"
+#include "cvMotion.h"
+#include "cvMultiplyS.h"
 
 extern "C" {
 
@@ -39,6 +41,8 @@ plugin_init( GstPlugin *plugin ) {
 	wRegister<wcvErode>("erode","erode image",SORT_BASIC,AUTHORS,plugin);
 	wRegister<wcvCamShift>("camshift","CamShift algorithm",SORT_VISION,AUTHORS,plugin);
 	wRegister<uvBlur>("uvblur","smooth U and/or V channel of YUV image",SORT_BASIC,AUTHORS,plugin);
+	wRegister<cvMotion>("motion","absolute difference to running average",SORT_BASIC,AUTHORS,plugin);
+	wRegister<cvMultiplyS>("multiplys","multiply with scalar",SORT_BASIC,AUTHORS,plugin);
 }
 	
 GST_PLUGIN_DEFINE (

@@ -39,13 +39,6 @@ bool wcvCamShift::Process( IplImage *image ) {
 //	g_message("%.2f", box.angle ); //(box.angle/(M_PI*2))*360 );
 	
 	float max = sqrt((image->width*image->width)+(image->height*image->height));
-	result.Clear();
-	result.Append( (box.center.x + ROI.x)/image->width );
-	result.Append( (box.center.y + ROI.y)/image->height );
-	result.Append( box.size.width/max );
-	result.Append( box.size.height/max );
-	result.Append( box.angle );
-	result.Set();
 
 //	g_message("box: %.2f/%.2f", box.center.x, box.center.y );
 	
