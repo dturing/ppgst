@@ -53,7 +53,7 @@ void cvImageData::UseBuffer( GstBuffer *buf, GstPad *pad ) {
 		return;
 	}
 	if( Data() ) {
-		cvSetImageData( img, Data(), channels*Width()*(abs(depth)/8) );
+		cvSetData( img, Data(), channels*Width()*(abs(depth)/8) );
 	}
 }
 
@@ -100,9 +100,9 @@ void cvYUVImageData::UseBuffer( GstBuffer *buf, GstPad *pad ) {
 	}
 	unsigned char *data = Data();
 	if( data ) {
-		cvSetImageData( Y, data, ysize.width );
-		cvSetImageData( U, data+(ysize.width*ysize.height), uvsize.width );
-		cvSetImageData( V, data+(ysize.width*ysize.height)+(uvsize.width*uvsize.height), uvsize.width );
+		cvSetData( Y, data, ysize.width );
+		cvSetData( U, data+(ysize.width*ysize.height), uvsize.width );
+		cvSetData( V, data+(ysize.width*ysize.height)+(uvsize.width*uvsize.height), uvsize.width );
 	}
 }
 
